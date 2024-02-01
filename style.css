@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ECEFF1;
+}
+
+nav {
+    padding: 1vh;
+    background-color: #1ae6e3;
+    overflow: hidden;
+
+    ul {
+        display: flex;
+        align-items: center;
+    
+        li {
+            list-style-type: none;
+            margin-left: 10vh;
+            margin-right: 3vh;
+
+            a {
+                text-decoration: none;
+                color: #142c2af1;
+            }
+        
+        };
+    
+        li:first-child {
+            flex: 1;
+            margin-left: 5vh;
+            font-size: large;
+            font-weight: bold;
+        };
+    
+        li:last-child {
+            background-color: rgb(34, 30, 30);
+            color: antiquewhite;
+            padding: 0.8%;
+            border-radius: 20vh;
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                color: antiquewhite;
+            }
+        }
+    }
+}
+
+.dropdown {
+    display: none;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    nav ul {
+        display: none;
+        float: none;
+        width: 100%; 
+        text-align: left;
+    }
+
+    .navbar-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .getintouch {
+            font-size: medium;
+            background-color: rgb(34, 30, 30);
+            padding: 1.6vw;
+            border-radius: 20px;
+            cursor: pointer;
+            min-width: 15vw;
+            text-align: center;
+            a {
+                text-decoration: none;
+                color: antiquewhite;
+            }
+        }
+    }
+
+    .dropdown {
+        display: flex;
+        float: left;
+        flex-direction: row;
+        overflow: hidden;
+        justify-content: space-between;
+        align-items: center;
+        width: 25vw;
+
+        .nexus-logo {
+            font-weight: bolder;
+            font-size: large;
+            flex: 1;
+        }
+    }
+
+    .dropdown .dropbtn {
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-content{
+        display: block;
+        background-color: #ddd;
+        position: absolute;
+        top: 5vh;
+        left: 4.5vw;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 10px;
+        padding: 1vh;
+
+        a:hover {
+            background-color: rgb(224, 248, 247);
+        }
+    }
+}
+
+#divider-line {
+    background-color: black;
+    padding: 0.5px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+#sales-pitch {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    .contact-service {
+        flex: 1;
+        .contact-details {
+            margin-top: 3vh;
+            margin-left: 2vw;
+            margin-right: 2vw;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #sales-pitch {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    #content-services-card {
+        min-width: 90vw;
+        margin-left: 2vw;
+        margin-right: 5vw;
+        margin-top: 3vh;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        text-align: justify;
+    
+        div p.title  {
+            font-weight: bold;
+            font-size: large;
+            margin-right: 3vh;
+            padding: 0.5vh;
+            min-width: 20vw;
+            text-align: start;
+        }
+    }
+}
+
+#content-services-card {
+    max-width: 60vw;
+    margin-left: 2vw;
+    margin-right: 5vw;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: justify;
+
+    div p.title  {
+        font-weight: bold;
+        font-size: large;
+        margin-right: 3vh;
+        padding: 0.5vh;
+        min-width: 20vw;
+        text-align: start;
+    };
+}
+
+
+#title-card {
+    margin-top: 3vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#brief-landing-view {
+    padding-top: 10vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-bottom: 20vh;
+    margin-bottom: 2vh;
+    background: #1ae6e3;
+
+    .short-note {
+        font-weight: bold;
+        font-size: xx-large;
+    }
+
+    .section {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+
+        .description{
+            margin-top: 1vh;
+            max-width: 45vw;
+            color: #142c2af1;
+            text-align: justify;
+            font-size: medium;
+        }
+
+        .button-getintouch {
+            border: black 1px solid;
+            padding: 1vh;
+            border-radius: 1vh;
+            cursor: pointer;
+            padding-top: 4vh;
+            a {
+                text-decoration: none;
+                color: #142c2af1;
+            }
+        }
+    }
+
+    .comments {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: medium;
+
+            span {
+                border: black 1px solid;
+                padding: 8px;
+                border-radius: 10px;
+                margin: 1vw;
+            }
+        .line-one {
+            margin: 3vh;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .comments {
+            font-size: small;
+        }
+        
+    }
+}
+
+#more-about-business {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding: 1px;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 2vh;
+
+    .catch-line p {
+        font-weight: bold;
+        font-size: x-large;
+        max-width: 240px;
+        margin-right: 2vw;
+    }
+
+    .section-one {
+        flex:1;
+        max-width: 80vw;
+    
+        .details {
+            text-align: justify;
+            font-size: medium;
+        }
+    
+        .know-more {
+            border: black 1px solid;
+            max-width: 85px;
+            margin-top: 2vh;
+            color: rgb(8, 9, 9);
+            text-decoration: none;
+            padding: 0.8vh;
+            border-radius: 10px;
+            text-align: center;
+        }
+    }
+}
+
+footer .base-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 100%;
+}
+
+#carrers-board {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 4vh;
+    align-items: center;
+
+    .job {
+        margin: 1vh;
+        border: black 1px solid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+        max-width: 40vw;
+        padding: 1vh;
+        .image-placeholder {
+            background-size: cover;
+        }
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            background: linear-gradient(to right, #8bf5e9, #67f7d5);
+            transform: scale(1.03);
+        }
+    
+        .job-description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+    
+            .job-title {
+                font-weight: bold;
+                padding: 1vh;
+                font-size: large;
+            }
+            .job-information {
+                max-width: 30vw;
+                text-align: justify;
+                color: rgb(23, 22, 22);
+                padding: 1vh;
+            }
+            .apply-button {
+                padding: 0.5vh;
+                margin-left: 0.5vh;
+                border: black 1px solid;
+                border-radius: 10px;
+                max-width: 7vw;
+                text-align: center;
+            }
+        }
+    } 
+}
+
+#faq-block {
+    margin-top: 3vh;
+    margin-left: 3vw;
+    margin-right: 2vw;
+    margin-bottom: 5vh;
+    font-size: large;
+
+
+    details {
+        p {
+            border: black 1px solid;
+            border-radius: 1vh;
+            padding: 1vh;
+            margin: 1vh;
+            position: relative;
+            left: 1vh;
+            max-width: 80vw;
+            text-align: justify;
+        }
+    }
+}
+
